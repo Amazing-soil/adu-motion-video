@@ -1,6 +1,6 @@
 {
   "schema": "adu-template-catalog/1",
-  "updated": "2026-10-04",
+  "updated": "2026-10-11",
   "numbering": "template-style",
   "templates": [
     {
@@ -19,7 +19,7 @@
             "对应文案",
             "证据组：三段本期真实视频"
           ],
-          "portraitSelection": "classic-performance@1.1.0-candidate",
+          "portraitSelection": "classic-performance@1.1.1-candidate",
           "layouts": {
             "landscape": {
               "width": 1920,
@@ -29,9 +29,13 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "classic-performance@1.1.0-candidate"
+              "selection": "classic-performance@1.1.1-candidate"
             }
-          }
+          },
+          "portraitHistory": [
+            "classic-performance@1.1.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         },
         {
           "id": "01-B",
@@ -45,7 +49,7 @@
             "对应文案",
             "演示或证据组：本期真实视频"
           ],
-          "portraitSelection": "continuous-performance@1.1.0-candidate",
+          "portraitSelection": "continuous-performance@1.1.1-candidate",
           "layouts": {
             "landscape": {
               "width": 1920,
@@ -55,9 +59,13 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "continuous-performance@1.1.0-candidate"
+              "selection": "continuous-performance@1.1.1-candidate"
             }
-          }
+          },
+          "portraitHistory": [
+            "continuous-performance@1.1.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         },
         {
           "id": "01-C",
@@ -73,7 +81,7 @@
           ],
           "scope": "三个完整镜头组；新内容整片与独立使用已验收",
           "previewBasis": "已保留的源演出短段；新内容验收摘要见实际包 review.json",
-          "portraitSelection": "stage-performance@1.1.0-candidate",
+          "portraitSelection": "stage-performance@1.1.1-candidate",
           "layouts": {
             "landscape": {
               "width": 1920,
@@ -83,9 +91,13 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "stage-performance@1.1.0-candidate"
+              "selection": "stage-performance@1.1.1-candidate"
             }
-          }
+          },
+          "portraitHistory": [
+            "stage-performance@1.1.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         },
         {
           "id": "01-D",
@@ -101,7 +113,7 @@
           ],
           "scope": "十三个候选完整组：十个源演出与三个新创基础组；源码结构覆盖已核对，新真人口播与独立使用连续声画待验收",
           "previewBasis": "保留的原三组源演出短段；不能代表新增十组已经人工验收",
-          "portraitSelection": "editorial-performance@1.2.0-candidate",
+          "portraitSelection": "editorial-performance@1.2.1-candidate",
           "layouts": {
             "landscape": {
               "width": 1920,
@@ -113,14 +125,18 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "editorial-performance@1.2.0-candidate"
+              "selection": "editorial-performance@1.2.1-candidate"
             }
           },
           "historicalSelections": {
             "landscape": "editorial-performance@1.0.0",
             "portrait": "editorial-performance@1.1.0-candidate"
           },
-          "acceptance": "technical candidate; human episode AV review pending"
+          "acceptance": "technical candidate; human episode AV review pending",
+          "portraitHistory": [
+            "editorial-performance@1.2.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         },
         {
           "id": "01-E",
@@ -136,7 +152,7 @@
           ],
           "scope": "三个完整镜头组；新内容整片与独立使用已验收",
           "previewBasis": "已保留的源演出短段；新内容验收摘要见实际包 review.json",
-          "portraitSelection": "kinetic-performance@1.2.0-candidate",
+          "portraitSelection": "kinetic-performance@1.2.1-candidate",
           "layouts": {
             "landscape": {
               "width": 1920,
@@ -148,14 +164,18 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "kinetic-performance@1.2.0-candidate"
+              "selection": "kinetic-performance@1.2.1-candidate"
             }
           },
           "historicalSelections": {
             "landscape": "kinetic-performance@1.0.0",
             "portrait": "kinetic-performance@1.1.0-candidate"
           },
-          "acceptance": "technical candidate; human episode AV review pending"
+          "acceptance": "technical candidate; human episode AV review pending",
+          "portraitHistory": [
+            "kinetic-performance@1.2.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         }
       ]
     },
@@ -176,7 +196,7 @@
             "透明插图"
           ],
           "scope": "一个续接镜头组",
-          "portraitSelection": "paper-balance@1.1.0-candidate",
+          "portraitSelection": "paper-balance@1.1.1-candidate",
           "layouts": {
             "landscape": {
               "width": 1920,
@@ -186,9 +206,13 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "paper-balance@1.1.0-candidate"
+              "selection": "paper-balance@1.1.1-candidate"
             }
-          }
+          },
+          "portraitHistory": [
+            "paper-balance@1.1.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         },
         {
           "id": "02-B",
@@ -206,7 +230,7 @@
           "previewBasis": "作者已认可的新内容样片的 8 秒开箱交付舞台局部；排除人物、字幕、账号角标和声音",
           "demoAudio": "none; silent detail preview",
           "qualityLimits": "严格栅格审计仍保留 1 issue/2 warning；实际限制见包 review.json",
-          "portraitSelection": "paper-ball-performance@1.1.0-candidate",
+          "portraitSelection": "paper-ball-performance@1.1.1-candidate",
           "layouts": {
             "landscape": {
               "width": 1920,
@@ -216,9 +240,13 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "paper-ball-performance@1.1.0-candidate"
+              "selection": "paper-ball-performance@1.1.1-candidate"
             }
-          }
+          },
+          "portraitHistory": [
+            "paper-ball-performance@1.1.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         }
       ]
     },
@@ -255,17 +283,21 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "anim4-showcase-macro@1.3.1-candidate"
+              "selection": "anim4-showcase-macro@1.3.2-candidate"
             }
           },
           "acceptance": "technical candidate; human episode AV review pending",
-          "portraitSelection": "anim4-showcase-macro@1.3.1-candidate",
+          "portraitSelection": "anim4-showcase-macro@1.3.2-candidate",
           "historicalSelections": {
             "landscape": "anim4-showcase-macro@1.1.1-candidate",
             "portrait": "anim4-showcase-macro@1.2.0-candidate"
           },
           "previousTechnicalCandidate": "anim4-showcase-macro@1.3.0-candidate",
-          "migrationNote": "1.3.0-candidate旧清单包含未封存Python缓存，不能用本机缓存补齐冷安装；另存重规划至1.3.1-candidate，旧A/B保留"
+          "migrationNote": "1.3.0-candidate旧清单包含未封存Python缓存，不能用本机缓存补齐冷安装；另存重规划至1.3.1-candidate，旧A/B保留",
+          "portraitHistory": [
+            "anim4-showcase-macro@1.3.1-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         }
       ]
     },
@@ -300,16 +332,20 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "doubao-console-performance@0.3.0-candidate"
+              "selection": "doubao-console-performance@0.3.1-candidate"
             }
           },
           "qualityLimits": "横屏有界文字已检查；竖屏选择0.2.0-candidate；仍待新口播完整声画与独立复用验收。",
-          "portraitSelection": "doubao-console-performance@0.3.0-candidate",
+          "portraitSelection": "doubao-console-performance@0.3.1-candidate",
           "historicalSelections": {
             "landscape": "doubao-console-performance@0.1.2-candidate",
             "portrait": "doubao-console-performance@0.2.0-candidate"
           },
-          "acceptance": "technical candidate; human episode AV review pending"
+          "acceptance": "technical candidate; human episode AV review pending",
+          "portraitHistory": [
+            "doubao-console-performance@0.3.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         }
       ]
     },
@@ -322,7 +358,7 @@
           "title": "角色与物件接力",
           "status": "candidate",
           "selection": "vivid-sticker-performance@0.2.0-candidate",
-          "portraitSelection": "vivid-sticker-performance@0.2.0-candidate",
+          "portraitSelection": "vivid-sticker-performance@0.2.1-candidate",
           "preview": "assets/demos/05-A.gif",
           "demo": "assets/demos/05-A.mp4",
           "guide": "references/vivid-sticker-template.md",
@@ -344,7 +380,7 @@
             "portrait": {
               "width": 1080,
               "height": 1920,
-              "selection": "vivid-sticker-performance@0.2.0-candidate",
+              "selection": "vivid-sticker-performance@0.2.1-candidate",
               "status": "candidate"
             }
           },
@@ -352,7 +388,11 @@
             "landscape": "vivid-sticker-performance@0.1.1-candidate",
             "portrait": "vivid-sticker-performance@0.1.1-candidate"
           },
-          "acceptance": "technical candidate; human episode AV review pending"
+          "acceptance": "technical candidate; human episode AV review pending",
+          "portraitHistory": [
+            "vivid-sticker-performance@0.2.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         }
       ]
     },
@@ -365,7 +405,7 @@
           "title": "原生竖屏",
           "status": "candidate",
           "selection": "vibrant-color-performance@0.1.0-candidate",
-          "portraitSelection": "vibrant-color-performance@0.1.0-candidate",
+          "portraitSelection": "vibrant-color-performance@0.1.1-candidate",
           "preview": "assets/demos/06-A.gif",
           "demo": "assets/demos/06-A.mp4",
           "guide": "references/vibrant-color-template.md",
@@ -382,9 +422,13 @@
               "width": 1080,
               "height": 1920,
               "status": "candidate",
-              "selection": "vibrant-color-performance@0.1.0-candidate"
+              "selection": "vibrant-color-performance@0.1.1-candidate"
             }
-          }
+          },
+          "portraitHistory": [
+            "vibrant-color-performance@0.1.0-candidate"
+          ],
+          "portraitMotion": "steady-anchor / smooth-presenter"
         }
       ]
     }

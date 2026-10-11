@@ -6,9 +6,9 @@ sys.path.insert(0,str(ROOT/'scripts'))
 from build_macro_project import scene_parts
 PACKS=[(n,'1.1.0-candidate') for n in ['classic-performance','continuous-performance','stage-performance','editorial-performance','kinetic-performance','paper-balance','paper-ball-performance']]+[('doubao-console-performance','0.2.0-candidate'),('dark-3d-showcase','1.2.0-candidate')]
 PLACEHOLDER='''<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280"><rect width="720" height="1280" fill="#34445c"/><circle cx="360" cy="410" r="130" fill="#87b3c9"/><path d="M100 1150 Q80 570 360 570 Q640 570 620 1150" fill="#6781a5"/><text x="360" y="1030" text-anchor="middle" fill="white" font-size="38">布局测试 · 无真人</text></svg>'''
-def create(directory):
+def create(directory,packs=None):
  directory=Path(directory);directory.mkdir(exist_ok=True)
- for family,version in PACKS:
+ for family,version in packs or PACKS:
   pack=ROOT/'packs'/family/version;m=json.loads((pack/'manifest.json').read_text());out=directory/family;out.mkdir()
   (out/'assets').mkdir();(out/'assets/demo-presenter.svg').write_text(PLACEHOLDER)
   if m.get('sourceFormat')=='authored-unit/1':
@@ -18,7 +18,8 @@ def create(directory):
    pre=re.sub(r'function faceAt\(t\) \{[\s\S]*?\n\}(?=\nfunction camAt)','',pre,count=1);pre=pre.replace('RACE_K','PACK_RACE_K')
   (out/'lib.js').write_text(lib)
   (out/'scenes.js').write_text('window.MACRO_SOURCE_SFX=[];\n'+pre+'\n'+''.join('{const before=SFX.length;'+body+';window.MACRO_SOURCE_SFX.push(SFX.slice(before));}\n' for body in blocks))
-  for name in ['style.css','portrait.css',m['layouts']['portrait']['runtime']]:shutil.copy2(pack/name,out/name)
+  for name in ['style.css','portrait.css',m['layouts']['portrait']['runtime']]:
+   if (pack/name).is_file():shutil.copy2(pack/name,out/name)
   # This fixture explicitly checks local system-font geometry; no private font.
   (out/'style.css').write_text(re.sub(r'@font-face\s*\{[^}]*\}', '', (out/'style.css').read_text(), flags=re.I))
   runtime=''
@@ -35,6 +36,7 @@ def create(directory):
   harness='<script src="macro_main.js"></script>'
   entry='<meta charset="utf-8"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portrait.css"><div id="stage"><div id="world"></div><div id="fx"></div><div id="ov"></div></div><script>'+boot+'</script><script src="lib.js"></script>'+runtime+'<script src="scenes.js"></script>'+harness+'<script src="'+m['layouts']['portrait']['runtime']+'"></script>'
   if family=='dark-3d-showcase':entry=entry.replace('window.PACK_LAYOUT=', 'window.SHOWCASE_LAYOUT={layout:"portrait",width:1080,height:1920,presenterEndSeconds:null};window.PACK_LAYOUT=')
+  if not (out/'portrait.css').is_file():entry=entry.replace('<link rel="stylesheet" href="portrait.css">','')
   (out/'index.html').write_text(entry);(out/'manifest.json').write_text(json.dumps(m));(out/'plan.json').write_text(json.dumps(plan))
 def create_gallery(directory):
  directory=Path(directory)
